@@ -1,0 +1,94 @@
+Algoritmo NumberConverter
+    // Declaração de variáveis
+    inteiro choice
+    cadeia binary, octal, hex, input
+    inteiro decimal, dec, deci, decValue, decimalValue, decimalVal, decVal
+    cadeia hexValue, octValue, hexVal
+
+    // Início do programa
+    escreva("Escolha a conversão: ")
+    escreva("1. Binário para Decimal")
+    escreva("2. Octal para Decimal")
+    escreva("3. Hexadecimal para Decimal")
+    escreva("4. Decimal para Binário")
+    escreva("5. Decimal para Octal")
+    escreva("6. Decimal para Hexadecimal")
+    escreva("7. Octal para Binário")
+    escreva("8. Hexadecimal para Binário")
+    escreva("9. Octal para Hexadecimal")
+    escreva("10. Hexadecimal para Octal")
+
+    // Leitura da escolha do usuário
+    leia choice
+
+    // Executa operações com base na escolha do usuário
+    escolha (choice)
+        caso 1:
+            escreva("Digite um número binário: ")
+            leia binary
+            escreva("O número em decimal é: " + converteParaDecimal(binary, 2))
+        caso 2:
+            escreva("Digite um número octal: ")
+            leia octal
+            escreva("O número em decimal é: " + converteParaDecimal(octal, 8))
+        caso 3:
+            escreva("Digite um número hexadecimal: ")
+            leia hex
+            escreva("O número em decimal é: " + converteParaDecimal(hex, 16))
+        caso 4:
+            escreva("Digite um número decimal: ")
+            leia decimal
+            escreva("O número em binário é: " + converteParaBinario(decimal))
+        caso 5:
+            escreva("Digite um número decimal: ")
+            leia dec
+            escreva("O número em octal é: " + converteParaOctal(dec))
+        caso 6:
+            escreva("Digite um número decimal: ")
+            leia deci
+            escreva("O número em hexadecimal é: " + converteParaHexadecimal(deci))
+        caso 7:
+            escreva("Digite um número octal: ")
+            leia oct
+            decValue = converteParaDecimal(oct, 8)
+            escreva("O número em binário é: " + converteParaBinario(decValue))
+        caso 8:
+            escreva("Digite um número hexadecimal: ")
+            leia hexValue
+            decimalValue = converteParaDecimal(hexValue, 16)
+            escreva("O número em binário é: " + converteParaBinario(decimalValue))
+        caso 9:
+            escreva("Digite um número octal: ")
+            leia octValue
+            decimalVal = converteParaDecimal(octValue, 8)
+            escreva("O número em hexadecimal é: " + converteParaHexadecimal(decimalVal))
+        caso 10:
+            escreva("Digite um número hexadecimal: ")
+            leia hexVal
+            decVal = converteParaDecimal(hexVal, 16)
+            escreva("O número em octal é: " + converteParaOctal(decVal))
+        caso contrario:
+            escreva("Escolha inválida. Tente novamente.")
+    fim escolha
+
+Fim Algoritmo
+
+Função converteParaDecimal(numero, base):
+    // Retorna o valor numérico de 'numero' na 'base' especificada
+    retornar valorNumericoDe(numero, base)
+
+Função converteParaBinario(decimal):
+    // Retorna a representação binária de 'decimal'
+    retornar representaçãoBinariaDe(decimal)
+
+Função converteParaOctal(decimal):
+    // Retorna a representação octal de 'decimal'
+    retornar representaçãoOctalDe(decimal)
+
+Função converteParaHexadecimal(decimal):
+    // Retorna a representação hexadecimal de 'decimal'
+    retornar representaçãoHexadecimalDe(decimal)
+
+
+
+
